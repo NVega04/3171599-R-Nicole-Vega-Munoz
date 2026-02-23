@@ -1,0 +1,109 @@
+/* Contenedor Principal */
+.stats-card {
+  padding: 24px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  border: 1px solid #edf2f7;
+}
+
+/* Cabecera del Panel */
+.stats-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.stats-header h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #1a202c;
+}
+
+.live-indicator {
+  font-size: 0.7rem;
+  background: #def7ec;
+  color: #03543f;
+  padding: 4px 8px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.live-indicator::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: #0e9f6e;
+  border-radius: 50%;
+  display: inline-block;
+  animation: pulse 2s infinite;
+}
+
+/* Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+/* Tarjeta Individual */
+.stat {
+  padding: 20px;
+  background: #f8fafc;
+  border-radius: 10px;
+  border: 1px solid #f1f5f9;
+}
+
+.stat.highlight {
+  background: #ebf8ff;
+  border-color: #bee3f8;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #2d3748;
+  display: block;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: #718096;
+  margin-top: 8px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* Tendencia (Trend) */
+.stat-trend {
+  font-size: 0.8rem;
+  color: #059669;
+  margin-top: 5px;
+  font-weight: 500;
+}
+
+/* Barra de Progreso */
+.stat-progress-bar {
+  height: 6px;
+  background: #e2e8f0;
+  border-radius: 10px;
+  margin-top: 15px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background: #4299e1;
+  transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
