@@ -1,0 +1,237 @@
+/* ============================================
+   SISTEMA DE DISEÑO: TRADUCCIÓN PROFESIONAL (CLEAN UI)
+   ============================================ */
+
+:root {
+  --primary: #4338ca;        /* Indigo de tu referencia */
+  --primary-dark: #3730a3;
+  --accent: #10b981;         /* Esmeralda para disponibilidad */
+  --text-main: #1e293b;      /* Slate 800 */
+  --text-muted: #64748b;     /* Slate 500 */
+  --bg-app: #f8fafc;         /* Fondo muy limpio */
+  --white: #ffffff;
+  --radius: 12px;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-app);
+  font-family: 'Inter', system-ui, sans-serif;
+  color: var(--text-main);
+  -webkit-font-smoothing: antialiased;
+}
+
+.app {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+/* ============================================
+   CABECERA (Uso del Gradiente de tu referencia)
+   ============================================ */
+
+.catalog-header {
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+.catalog-header h1 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #4338ca 0%, #6d28d9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 12px;
+}
+
+/* Indicador de resultados estilo "badge" */
+.results-summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: white;
+  padding: 6px 16px;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--primary);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid #e2e8f0;
+}
+
+/* ============================================
+   BARRA DE BÚSQUEDA Y FILTROS
+   ============================================ */
+
+.search-bar {
+  margin-bottom: 24px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 16px 20px;
+  font-size: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius);
+  background: var(--white);
+  transition: all 0.2s;
+  box-shadow: var(--shadow-sm);
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(67, 56, 202, 0.1);
+}
+
+.controls-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+select {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  background: white;
+  color: var(--text-main);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* ============================================
+   TARJETAS DE SERVICIO (Clean & Modern)
+   ============================================ */
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.service-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 24px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+
+.translator-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 4px 0;
+  color: var(--primary);
+}
+
+.badge {
+  background: #f1f5f9;
+  color: var(--text-muted);
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  display: inline-block;
+  width: fit-content;
+}
+
+.languages {
+  font-size: 0.9rem;
+  color: var(--text-main);
+  margin-bottom: 8px;
+}
+
+.rate {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-top: auto;
+  padding-top: 16px;
+}
+
+/* Estado de disponibilidad con el Pulso de tu referencia */
+.availability-status {
+  margin: 12px 0;
+}
+
+.status.available {
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.status.available::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: var(--accent);
+  border-radius: 50%;
+  animation: pulse-opacity 1.5s infinite;
+}
+
+/* ============================================
+   BOTONES
+   ============================================ */
+
+.btn-view {
+  background: #a8a5c7;
+  color: black;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  margin-top: 16px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.btn-delete {
+  background: linear-gradient(135deg, #4338ca 0%, #6d28d9 100%);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  margin-top: 16px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.btn-clear {
+  background: #f1f5f9;
+  color: var(--text-main);
+  border: 1px solid #e2e8f0;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-clear:hover { background: #e2e8f0; }
+
+/* Animación de Pulso */
+@keyframes pulse-opacity {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(1.1); }
+}
